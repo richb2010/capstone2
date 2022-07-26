@@ -1,36 +1,34 @@
-const cartBtn = document.getElementById("Cartbutton")
+$('.like-btn').on('click', function() {
+    $(this).toggleClass('is-active');
+ });
 
-const getCart = () => {
-    axios.get("http://127.0.0.1:5500/client/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
-const getCart2 = () => {
-    axios.get("http://127.0.0.1:5500/client/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
-const getCart3 = () => {
-    axios.get("http://127.0.0.1:5500/client/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
-const getCart4 = () => {
-    axios.get("http://127.0.0.1:5500/client/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
-carttBtn.addEventListener('click', getCart)
-cartBtn.addEventListener('click', getCart
-cartBtn.addEventListener('click', getCart)
-cartBtn.addEventListener('click', getCart)
-
-
+ '.minus-btn'.on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+ 
+    if (value &amp;amp;gt; 1) {
+        value = value - 1;
+    } else {
+        value = 0;
+    }
+ 
+  $input.val(value);
+ 
+});
+ 
+$('.plus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+ 
+    if (value &amp;amp;lt; 100) {
+        value = value + 1;
+    } else {
+        value =100;
+    }
+ 
+    $input.val(value);
+}

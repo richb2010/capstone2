@@ -1,25 +1,23 @@
 const express = require("express");
 const cors = require("cors");
-const { getTetonSoccer, getTetonSoccer } = require('./controller')
+const { getStore, getCart } = require('./controller')
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
 
-const {
-    getProduct,
-    deleteProduct,
-    createList,
-    updateCart,
+app.get("/api/store", getStore);
+app.get("/api/cart", getCart)
 
-} = require('./controller')
+app.listen(4000, () => console.log("Server running on 4000"));
 
-app.get(`/api/TetonSoccer`, getProduct, getProduct2,getProduct3, getProduct4)
-app.delete(`/api/TetonSoccer`, getProduct, getProduct2,getProduct3, getProduct4)
-app.post(`/api/cart`, createList)
-app.put(`TetonSoccer`, updateCart)
+app.use(express.json());
 
-app.listen(5500, ()=> console.log(`running on 5500 `))
+const { getCart } = require('./controller')
 
+app.get("/api/cart", getCart);
+
+app.listen(5500, () => console.log("Server running on 5500"));
 

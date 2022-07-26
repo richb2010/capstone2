@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cart.css">
     <script> src="index.js"</script>
+    <script> src="Cart.html"</script>
 </head>
 <header>
      <title> Teton Soccer Store</title>
     <h2> Teton Soccer Store</h2>
     <nav>
+        <nav>
             <div class="topnav">
-                <ol>
-                    <li class="crumb"><a href="./index.html">Store</a></li>
-                    <li class="crumb"><a href="./cart.html">cart</a></li>
-                </ol>
-                
+                <a class="active" href="./index.html">Store</a>
+                <a href="./Cart.html">Cart</a>
                 <a href="#contact">Contact</a>
+            </div>
+        </nav>
+            <div>
                 <input type="text" placeholder="Search..">
               </div>
         </nav>
@@ -35,6 +38,17 @@
                     <p class="price">$79.99</p>
                     <p>Faster in all dimensions, the X Speedportal is designed to help players go beyond their limits and reach uncharted levels of speed.</p>
                     <p><button>Add to Cart</button></p>
+                    <form action="/cart/" enctype="multipart/form-data" method="post" class="BuyForm">
+                        <fieldset>
+                            <input type="hidden" name="products[0395][product_id]" value="29" class="HiddenInput">
+                            <div class="FormItem BuyFormQuantity">
+                                <label for="BuyFormQuantity-0395">Quantity:</label>
+                                <input type="number" id="BuyFormQuantity-0395" name="products[0395][quantity]" size="3" min="0" value="1">
+                            </div>
+                            <div class="FormItem FormSubmit">
+                                <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                            </div>
+                        </fieldset>
                   </div>
                   <div class="card">
                     <img src="https://www.imagehandler.net/preview/?iset=0100&fmt=jpg&iindex=0007&w=190&h=190&img=A1048837000&c=201" alt="Soccer Jersey" style="width:auto">
@@ -46,7 +60,17 @@
                         
                         - Heat pressed adidas logo on the right chest. Iconic three stripes run from neck to shoulder..</p>
                     <p>
-                        <button>Add to Cart</button></p>
+                        <button>Add to Cart</button></p><form action="/cart/" enctype="multipart/form-data" method="post" class="BuyForm">
+                            <fieldset>
+                                <input type="hidden" name="products[0395][product_id]" value="29" class="HiddenInput">
+                                <div class="FormItem BuyFormQuantity">
+                                    <label for="BuyFormQuantity-0395">Quantity:</label>
+                                    <input type="number" id="BuyFormQuantity-0395" name="products[0395][quantity]" size="3" min="0" value="1">
+                                </div>
+                                <div class="FormItem FormSubmit">
+                                    <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                                </div>
+                            </fieldset>
                   </div>
                   <div class="card">
                     <img src="https://www.imagehandler.net/preview/?iset=0100&fmt=jpg&iindex=0007&w=190&h=190&img=A1020265000&c=001" alt="Soccer Jersey" style="width:auto">
@@ -58,8 +82,20 @@
                         Applied three stripes at either side. 
                         Embroidered adidas logo on front left leg.
                         Elastic waist with draw cord.</p>
+
                     <p>
                         <button>Add to Cart</button></p>
+                        <form action="/cart/" enctype="multipart/form-data" method="post" class="BuyForm">
+                            <fieldset>
+                                <input type="hidden" name="products[0395][product_id]" value="29" class="HiddenInput">
+                                <div class="FormItem BuyFormQuantity">
+                                    <label for="BuyFormQuantity-0395">Quantity:</label>
+                                    <input type="number" id="BuyFormQuantity-0395" name="products[0395][quantity]" size="3" min="0" value="1">
+                                </div>
+                                <div class="FormItem FormSubmit">
+                                    <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                                </div>
+                            </fieldset>
                   </div>
                 
                 </div>
@@ -70,6 +106,17 @@
                     <p> Adidas Predator gloves turn any goalkeeper into a shot-stopping beast! Play with the confidence that you're competing in a superior set of gloves from a great soccer brand.</p>
                     <p>
                         <button>Add to Cart</button></p>
+                        <form action="/cart/" enctype="multipart/form-data" method="post" class="BuyForm">
+                            <fieldset>
+                                <input type="hidden" name="products[0395][product_id]" value="29" class="HiddenInput">
+                                <div class="FormItem BuyFormQuantity">
+                                    <label for="BuyFormQuantity-0395">Quantity:</label>
+                                    <input type="number" id="BuyFormQuantity-0395" name="products[0395][quantity]" size="3" min="0" value="1">
+                                </div>
+                                <div class="FormItem FormSubmit">
+                                    <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                                </div>
+                            </fieldset>
             </div>
                 <div class="card">
                     <img src="https://www.imagehandler.net/preview/?iset=0100&fmt=jpg&iindex=0062&w=190&h=190&img=A1061386000&c=999" alt="Soccer Jersey" style="width:auto">
@@ -80,6 +127,17 @@
                         The pattern features the rose, national flower of the US, and the bunchberry, the national flower of Canada. The flowers are presented in various colors that represent over 70 countries where MLS players originate.</p>
                     <p>
                         <button>Add to Cart</button></p>
+                        <form action="/cart/" enctype="multipart/form-data" method="post" class="BuyForm">
+                            <fieldset>
+                                <input type="hidden" name="products[0395][product_id]" value="29" class="HiddenInput">
+                                <div class="FormItem BuyFormQuantity">
+                                    <label for="BuyFormQuantity-0395">Quantity:</label>
+                                    <input type="number" id="BuyFormQuantity-0395" name="products[0395][quantity]" size="3" min="0" value="1">
+                                </div>
+                                <div class="FormItem FormSubmit">
+                                    <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                                </div>
+                            </fieldset>
                   </div>
                 </div>
 <body>

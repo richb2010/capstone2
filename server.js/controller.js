@@ -1,41 +1,30 @@
-const houses = require(`./db.json`)
-let globalId = 4 
+const cart = [
+    "Soccer Jersey", "Soccer ball","Goalie Groves", "Soccer Shorts"
+]
 
+const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 module.exports = {
-    getCart: (req, res) => res.status(200).send(cart),
-    deleteProduct: (req,res) => {
-        let index= product.findIndex(elem => elem.id === +req.params.id)
-        product.splice(index, 1)
-        res.status(200).send(cart)
-    },
-    createCart: (req,res) => {
-        let {product, price, imageURL } = req.body
-        let newItem = {
-            id: product,
-            PRODUCT DESCRIPTION,
-            price,
-            imageURL
-        }
-        Store.push(newProduct)
-        res.status(200).send(cart)
-        globalId++
-    },
-    updatCart: (req, res) => {
-        let { id } = req.params
-        let { type } = req.body
-        let index = product.findIndex(elm => elem.id === +id)
+    getCart: (req, res) => {
+        let randomIndex = getRandomIndex(product);
+        const randomFortunes = product[randomIndex];
 
-        if (product[index].price <= 100 && type === 'minus') {
-            product[index].price = 0 
-            res.status(200).send(cart)
-        } else if (type === 'plus') {
-            product[index].price += 100
-            res.status(200).send(cart)
-        } else if (type === 'minus') {
-            product[index].price -= 100
-            res.status(200).send(cart)
-        }else {
-            res.sendStatus(400)
-        }
+        res.status(200).send(randomProduct);
+    },
+    
+
+    getProduct: (req, res) => {
+        const product = ["Your items has been added to your cart")
+        // choose Product from home 
+        let randomIndex  = getRandomIndex(product);
+        let  = compliments[randomIndex];
+      
+        res.status(200).send(randomCompliment);
     }
+    addCompliment: (req, res) => {
+        const { compliments } = req.body;
+        compliments.push(compliment):
+        res.senStatus(200); 
+    }
+
 }
+
