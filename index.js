@@ -10,27 +10,85 @@ const getProduct = () => {
     });
 };
 
-cartBtn.addEventListener('click',getProduct)
-const CartBtn = document.getElementById("cartButton")
-const productInput = document.getElementById("complimentInput")
-const addCartButton = document.getElementById("addCartButton")
+let items_array = [
+    { "name": "Soccer Cheats", "id": 1, count: 1 },
+    { "name": "Soccer Jersey", "id": 2, count: 1 },
+    { "name": "Soccer Ball", "id": 3, count: 1 },
+    { "name": "Soccer Shorts", "id": 4, count: 1 },
+    {  "name": "Goalie Grooves", "id": 5, count: 1 }
+];
 
-const getCart = () => {
-    axios.get("http://localhost:4000/api/cart/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
+let cart = [];
+function appendNode(parent, element) {
+    parent.appendChild(element);
 };
-const addProduct = () => {
-    const productInput = document.getElementById('complimentInput')
-    const body ={
-        Product: ProductInput.value
-    }
-    axios.post(`http://localhost:4000/api/compliment`, body)
-    .then(() => alert('Product has been added'))
-    .catch ((err) => console.log(err) )
-}
 
-CartBtn.addEventListener('click', getAlertData)
-addcarttBtn.addEventListener('click', addCompliment)
+function getDiv(container) {
+    return document.getElementById(container);
+};
+
+function createNode(node) {
+    let element = document.createElement(node);
+    return element;
+};
+function appendNode(parent, element) {
+    parent.appendChild(element);
+};
+
+function getDiv(container) {
+    return document.getElementById(container);
+};
+
+function createNode(node) {
+    let element = document.createElement(node);
+    return element;
+};
+function displayItems(items, container) {
+    let items_container = getDiv(container);
+    items_container.innerHTML = '';
+
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+
+        let item_node = createNode("li");
+        item_node.setAttribute("id", item.id);
+
+        if (item.count > 0) {
+            item_node.innerHTML = `${item.name} 
+            <span id="badge">${item.count}</span>`;
+            appendNode(items_container, item_node);
+        }
+    }
+}
+function addOrRemoveItemsFromCart(action) {
+    // code in the previous block is still there
+
+    function takeAction(container) {
+        container.addEventListener("click", function (event) {
+            let item_id = event.target.id;
+
+            if (item_id !== "items" && item_id !== "badge") {
+                let item = items_array.filter(function (item) {
+                    return item.id == item_id;
+                })[0];
+
+                let item_in_cart = cart.filter(function (item) {
+                    return item.id == item_id;
+                })[0];
+
+                if (item_in_cart == undefined) {
+                    cart.push(item);
+                } else if (action == "add") {
+                    item_in_cart.count++;
+                } else if (action == "remove") {
+                    item_in_cart.count--;
+                }
+
+                console.log(cart);
+                displayItems(cart, "cart");
+            };
+        });
+    };
+}
+addOrRemoveItemsFromCart('add');
+addOrRemoveItemsFromCart('remove');

@@ -1,137 +1,3 @@
-title {
-  height: 60px;
-  border-bottom: 1px solid #E1E8EE;
-  padding: 20px 30px;
-  color: #5E6977;
-  font-size: 18px;
-  font-weight: 400;
-}
- 
-.item {
-  padding: 20px 30px;
-  height: 120px;
-  display: flex;
-}
- 
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
-.buttons {
-  position: relative;
-  padding-top: 30px;
-  margin-right: 60px;
-}
-.delete-btn,
-.like-btn {
-  display: inline-block;
-  Cursor: pointer;
-}
-.delete-btn {
-  width: 18px;
-  height: 17px;
-  background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
-}
- 
-.like-btn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  background: url('twitter-heart.png');
-  width: 60px;
-  height: 60px;
-  background-size: 2900%;
-  background-repeat: no-repeat;
-}
-.image {
-  margin-right: 50px;
-}
- 
-Let’s add some basic style to  product name and description.
-.description {
-  padding-top: 10px;
-  margin-right: 60px;
-  width: 115px;
-}
- 
-.description span {
-  display: block;
-  font-size: 14px;
-  color: #43484D;
-  font-weight: 400;
-}
- 
-.description span:first-child {
-  margin-bottom: 5px;
-}
-.description span:last-child {
-  font-weight: 300;
-  margin-top: 8px;
-  color: #86939E;
-}
-.total-price {
-  width: 83px;
-  padding-top: 27px;
-  text-align: center;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
-.quantity {
-  padding-top: 20px;
-  margin-right: 60px;
-}
-.quantity input {
-  -webkit-appearance: none;
-  border: none;
-  text-align: center;
-  width: 32px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
- 
-button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-.minus-btn img {
-  margin-bottom: 3px;
-}
-.plus-btn img {
-  margin-top: 2px;
-}
- 
-button:focus,
-input:focus {
-  outline:0;
-}
- /* Change the color of links on hover */
- .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-};
-
-/* Style the "active" element to highlight the current page */
-.topnav a.active {
-  background-color: #2196F3;
-  color: white;
-};
-
-/* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -159,7 +25,36 @@ input:focus {
   background-color: #04AA6D;
   color: white;
 }
-
-
-
-
+#wrapper { 
+  display: flex;
+  } 
+li{ 
+  width: 100px; 
+  height: 30px; 
+  list-style: none; 
+  background-color: rgb(1, 4, 49); 
+  border-radius: 10px; 
+  margin: 5px; 
+  padding: 5px; 
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+} 
+#badge {
+   width: 20px; 
+   height: 20px; 
+   background-color: #f0ad4e; 
+   color: white; 
+   padding: 2px 2px; 
+   border-radius: 5px; 
+   margin-left: 10px; 
+   text-align: center; 
+   float: right; 
+   } 
+#items #badge { /* hides the count badge on the shopping list */ 
+  display: none; 
+} 
+#container { 
+  margin: 50px;
+} 
